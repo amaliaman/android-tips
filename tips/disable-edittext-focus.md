@@ -33,7 +33,7 @@ public boolean dispatchTouchEvent(MotionEvent event) {
 android:focusable="true"
 android:focusableInTouchMode="true"
 ```
-## Disable focus + open keyboard on edit texts
+## Disable focus + opened keyboard
 - The previous step takes care of the problem for specific EditText views, you might not need this step.
 - Applies to **all** EditText views in the app.
 - Add to `AndroidManifest.xml` file:
