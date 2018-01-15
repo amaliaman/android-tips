@@ -1,4 +1,4 @@
 # android-tips
 Android development tips
 
-See [tips](/tips) folder for tips :simple_smile:
+See [tips](/tips) folder for tips :smile:
