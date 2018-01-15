@@ -28,7 +28,8 @@ public boolean dispatchTouchEvent(MotionEvent event) {
 (credit: https://gist.github.com/sc0rch/7c982999e5821e6338c25390f50d2993)
 ## Disable auto focus on activity start 
 - Applies only to EditText views under the parent.
-- Add the following properties to the parent of the EditText:
+- Wrap the EditText in a ViewGroup (LinearLayout for example,) if it's not already nested.
+- Add the following properties to the parent:
 ```r
 android:focusable="true"
 android:focusableInTouchMode="true"
