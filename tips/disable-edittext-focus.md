@@ -29,7 +29,7 @@ public boolean dispatchTouchEvent(MotionEvent event) {
 ## Disable auto focus on activity start 
 - Applies only to EditText views under the parent.
 - Add the following properties to the parent of the EditText:
-```xml
+```r
 android:focusable="true"
 android:focusableInTouchMode="true"
 ```
@@ -37,6 +37,6 @@ android:focusableInTouchMode="true"
 - The previous step takes care of the problem for specific EditText views, you might not need this step.
 - Applies to **all** EditText views in the app.
 - Add to `AndroidManifest.xml` file:
-```xml
+```r
 android:windowSoftInputMode="stateHidden"
 ```
