@@ -5,6 +5,7 @@ It also gets focus on activity start, this means that if it's not handled than w
 
 There are a few stages to the solution, you can implement all or just a part of them depending on the requirement.
 ## Close keyboard + lose focus on touch outside
+Applies to **all** EditText views in the activity.
 Add `dispatchTouchEvent` method to the relevant activity:
 ```java
 @Override
@@ -26,9 +27,20 @@ public boolean dispatchTouchEvent(MotionEvent event) {
    return super.dispatchTouchEvent(event);
 }
 ```
-# Disable auto focus on start 
+## Disable auto focus on activity start 
+Applies only to EditText views under the parent.
+
 Add the following properties to the parent of the EditText:
 ```xml
 android:focusable="true"
 android:focusableInTouchMode="true"
+```
+## Prevent focus and keyboard auto on edit texts
+Not relevant if using the previous tip.
+
+Applies to **all** EditText views in the app.
+
+Add to `AndroidManifest.xml` file:
+```xml
+android:windowSoftInputMode="stateHidden"
 ```
