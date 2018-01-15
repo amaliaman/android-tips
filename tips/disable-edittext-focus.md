@@ -3,11 +3,10 @@ EditText view has a tendency to always keep the focus, even after touching outsi
 
 It also gets focus on activity start, this means that if it's not handled than when the activity starts the focus is at the EditText and the keyboard is opened.
 
-There are a few stages to the solution, you can implement all or just a part of them depending on the requirement.
+There are a few steps to the solution, you can implement all or just a part of them depending on the requirement.
 ## Close keyboard + lose focus on touch outside
-Applies to **all** EditText views in the activity.
-
-Add `dispatchTouchEvent` method to the relevant activity:
+- Applies to **all** EditText views in the activity.
+- Add `dispatchTouchEvent` method to the relevant activity:
 ```java
 @Override
 public boolean dispatchTouchEvent(MotionEvent event) {
@@ -29,15 +28,14 @@ public boolean dispatchTouchEvent(MotionEvent event) {
 }
 ```
 ## Disable auto focus on activity start 
-Applies only to EditText views under the parent.
-
-Add the following properties to the parent of the EditText:
+- Applies only to EditText views under the parent.
+- Add the following properties to the parent of the EditText:
 ```xml
 android:focusable="true"
 android:focusableInTouchMode="true"
 ```
 ## Prevent focus and keyboard auto on edit texts
-- The previous step takes care of this for specific EditText views, you might not need this step.
+- The previous step takes care of the problem for specific EditText views, you might not need this step.
 - Applies to **all** EditText views in the app.
 - Add to `AndroidManifest.xml` file:
 ```xml
