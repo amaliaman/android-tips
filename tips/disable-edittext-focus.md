@@ -26,3 +26,9 @@ public boolean dispatchTouchEvent(MotionEvent event) {
    return super.dispatchTouchEvent(event);
 }
 ```
+# Disable auto focus on start 
+Add the following properties to the parent of the EditText:
+```xml
+android:focusable="true"
+android:focusableInTouchMode="true"
+```
