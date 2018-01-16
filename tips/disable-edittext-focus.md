@@ -1,6 +1,6 @@
 # How to disable EditText from stealing the focus
 EditText view has a tendency to always keep the focus, even after touching outside it.  
-It also gets focus on activity start, this means that if it's not handled than when the activity starts the focus is at the EditText and the keyboard is opened.  
+It also gets focus on activity start, this means that if it's not handled then when the activity starts the focus is at the EditText and the keyboard is opened.  
 There are a few steps to the solution, you can implement all or just a part of them depending on the requirement.
 ## Close keyboard + lose focus on touch outside
 - Applies to **all** EditText views in the activity.
