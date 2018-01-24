@@ -1,6 +1,6 @@
 # ADB USB driver not recognized
 
-If after following the instructions in https://developer.android.com/studio/run/oem-usb.html your phone still isn't recognized by Android studio, it means that the USB ADB driver isn’t installed properly on your computer.
+If after following the instructions in https://developer.android.com/studio/run/oem-usb.html your phone still isn't recognized by Android Studio, it means that the USB ADB driver isn’t installed properly on your computer.
 
 You can verify it by browsing to *chrome://inspect/#devices* and NOT seeing your phone listed.
 
